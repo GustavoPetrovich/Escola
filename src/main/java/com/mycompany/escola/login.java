@@ -126,6 +126,19 @@ public class login extends javax.swing.JFrame {
     private void jBEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEntrarActionPerformed
         System.out.println("Login: " + jTLogin.getText());
         System.out.println("Senha: " + String.valueOf(jPSenha.getPassword()));
+        
+        if ("admin".equals(jTLogin.getText())) {
+            if ("123456".equals(String.valueOf(jPSenha.getPassword()))){
+                Principal p = new Principal();
+                p.setVisible(true);
+                this.dispose();
+                System.out.println("Autorizado");
+            }else {
+                System.out.println("Senha Invalida");
+            }
+        }else {
+            System.out.println("Errou");
+        }
     }//GEN-LAST:event_jBEntrarActionPerformed
 
     /**
